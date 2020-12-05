@@ -52,7 +52,7 @@ function setup() {
 
   ground1 = new Ground(600,285,200,10);
   ground2 = new Ground(900,195,200,10);
-  ground3 = new Ground(750, 600, 1500, 10)
+  ground3 = new Ground(750, 600, 1500, 50)
 
 
   block14 = new Block(900,170,30,40);
@@ -77,7 +77,7 @@ function setup() {
 }
 
 function draw() {
-  background("grey");
+  background("blue");
   Engine.update(engine);
 
   fill(rgb(135, 205, 236));
@@ -94,7 +94,7 @@ function draw() {
   block8.display();
   block9.display();
 
-  fill("lightPink");
+  fill("lightpink");
   bolck10.display();
   block11.display();
   block12.display();
@@ -138,7 +138,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-	if(keyCode === 32)
+	if(keyDown("space") )
 	{
 		Matter.Body.setPosition(player.body,{x:235, y:420})
 		chain.attach(player.body);
